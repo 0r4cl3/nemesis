@@ -5,8 +5,10 @@
   <thead>
     <tr>
       <th>Client name</th>
-      <th>Image url</th>
+      <th>Logo</th>
       <th>Address</th>
+      <th>City</th>
+      <th>Postcode</th>
       <th colspan="1"></th>
     </tr>
   </thead>
@@ -15,11 +17,21 @@
     <% @clients.each do |client| %>
       <tr>
         <td><%= link_to client.client_name, client %></td>
-        <td><%= client.image_url %></td>
+        <td>
+          <% if client.image_url.empty? %>
+          <%= "NO" %>
+          <% else %>
+          <%= "YES" %>
+          <% end %>
+        </td>
         <td><%= client.address %></td>
-        <td><%= link_to 'Show', client %>
-            <%= link_to 'Edit', edit_client_path(client) %>
-            <%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= client.city %></td>
+        <td><%= client.postcode %></td>
+        <td>
+            <button type="button" class="btn btn-warning btn-xs"><%= link_to 'Show', client %></button>
+            <button type="button" class="btn btn-warning btn-xs"><%= link_to 'Edit', edit_client_path(client) %></button>
+            <button type="button" class="btn btn-danger btn-xs"><%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -27,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Client', new_client_path %>
+<button type="button" class="btn btn-primary"><%= link_to 'New Client', new_client_path %></button>
