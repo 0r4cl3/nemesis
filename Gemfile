@@ -31,6 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass'
 gem 'sprockets'
+gem 'less-rails-bootstrap'
 
 # Use unicorn as the app server
 # gem 'unicorn'
