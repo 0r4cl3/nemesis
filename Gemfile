@@ -37,4 +37,16 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
 
+group :test do
+	gem 'selenium-webdriver'
+  	gem 'capybara'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
