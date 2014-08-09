@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'docs/computers'
+
+  get 'docs/servers'
+
+  get 'docs/suppliers'
+
   resources :clients
 
   # The priority is based upon order of creation: first created -> highest priority.
