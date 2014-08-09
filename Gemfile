@@ -29,8 +29,12 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'bootstrap-sass'
+gem 'sprockets'
+
 # Use unicorn as the app server
 # gem 'unicorn'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -50,3 +54,4 @@ end
 group :development, :test do
   gem 'rspec-rails'
 end
+

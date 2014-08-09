@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'docs/suppliers'
 
+  get 'docs/office365'
+
   resources :clients
 
   # The priority is based upon order of creation: first created -> highest priority.
