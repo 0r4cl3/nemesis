@@ -28,9 +28,9 @@
         <td><%= client.city %></td>
         <td><%= client.postcode %></td>
         <td>
-            <button type="button" class="btn btn-warning btn-xs"><%= link_to 'Show', client %></button>
-            <button type="button" class="btn btn-warning btn-xs"><%= link_to 'Edit', edit_client_path(client) %></button>
-            <button type="button" class="btn btn-danger btn-xs"><%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            <%= link_to 'Show', client, :class => "btn btn-warning btn-xs" %>
+            <%= link_to 'Edit', edit_client_path(client), :class => "btn btn-warning btn-xs" %>
+            <%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-xs" %>
         </td>
       </tr>
     <% end %>
@@ -39,4 +39,4 @@
 
 <br>
 
-<button type="button" class="btn btn-primary"><%= link_to 'New Client', new_client_path %></button>
+<%= link_to 'New Client', new_client_path, :class => "btn btn-primary" %>
