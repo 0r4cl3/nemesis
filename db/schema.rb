@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140809150926) do
+ActiveRecord::Schema.define(version: 20140814225604) do
+
+  create_table "categories", force: true do |t|
+    t.integer  "client_id"
+    t.text     "office365"
+    t.text     "supplier"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clients", force: true do |t|
     t.string   "client_name"
